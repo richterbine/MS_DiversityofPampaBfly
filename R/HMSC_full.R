@@ -248,7 +248,7 @@ p.mcmc <- cowplot::plot_grid(mcmc.pa + labs(x = NULL, tag = "a)") + theme(legend
 p.mcmc
 
 cowplot::plot_grid(p.mcmc, leg, ncol = 2, rel_widths = c(2,.5))
-cowplot::save_plot(here::here("output/figures/Final_figures/FigS2_psrfModels.png"),
+cowplot::save_plot(here::here("output/Final_figures/FigS2_psrfModels.png"),
                    cowplot::plot_grid(p.mcmc, leg, ncol = 2, rel_widths = c(2,.5)),
                    base_width = 10, base_height = 6)
 
@@ -461,7 +461,7 @@ cowplot::plot_grid(plotlist = p.beta$PA, nrow = 2, labels = c("EEA2", "JG1", "JG
                                                               "SG1", "SG2"), label_size = 10,
                    label_fontface = "plain")
 
-cowplot::save_plot(here::here("output/figures/Final_figures/FigS3_PA_betas.png"), 
+cowplot::save_plot(here::here("output/Final_figures/FigS3_PA_betas.png"), 
                    cowplot::plot_grid(plotlist = p.beta$PA, ncol = 4, 
                                       labels = c("EEA2", "JG1", "JG2", "QR1", "QR2", "SG1", "SG2"), 
                                       label_size = 10, label_fontface = "plain"),
@@ -472,7 +472,7 @@ cowplot::plot_grid(plotlist = p.beta$Normal, nrow = 2,
                    labels = c("EEA2", "JG1", "JG2", "QR1", "QR2", "SG1", "SG2"), 
                    label_size = 10, label_fontface = "plain")
 
-cowplot::save_plot(here::here("output/figures/Final_figures/FigS4_Normal_betas.png"), 
+cowplot::save_plot(here::here("output/Final_figures/FigS4_Normal_betas.png"), 
                    cowplot::plot_grid(plotlist = p.beta$Normal, ncol = 4, 
                                       labels = c("EEA2", "JG1", "JG2", "QR1", "QR2", "SG1", "SG2"), 
                                       label_size = 10, label_fontface = "plain"),
@@ -528,7 +528,7 @@ cowplot::plot_grid(plotlist = p.gamma$PA)
 
 cowplot::plot_grid(plotlist = p.gamma$Normal)
 
-save_plot(here::here("output/figures/Final_figures/FigS4_Normal_gamma.png"), 
+save_plot(here::here("output/Final_figures/FigS4_Normal_gamma.png"), 
           cowplot::plot_grid(p.gamma$Normal[[3]], p.gamma$Normal[[4]], 
                              p.gamma$Normal[[5]], p.gamma$Normal[[6]],
                              p.gamma$Normal[[7]],
@@ -613,7 +613,7 @@ legend <- get_legend(
 
 cowplot::plot_grid(plotlist = p.omega$PA)
 
-save_plot(here::here("output/figures/Final_figures/FigS5_PA_omega.png"), 
+save_plot(here::here("output/Final_figures/FigS5_PA_omega.png"), 
           cowplot::plot_grid(p.omega$PA[[1]], p.omega$PA[[3]],
                              p.omega$PA[[5]], legend, ncol = 2,
                              rel_widths = c(2,2,2,1)),
@@ -621,7 +621,7 @@ save_plot(here::here("output/figures/Final_figures/FigS5_PA_omega.png"),
 
 cowplot::plot_grid(plotlist = p.omega$Normal)
 
-save_plot(here::here("output/figures/Final_figures/FigS6_Normal_omega.png"), 
+save_plot(here::here("output/Final_figures/FigS6_Normal_omega.png"), 
           cowplot::plot_grid(p.omega$Normal[[1]], p.omega$Normal[[2]], 
                              p.omega$Normal[[3]], p.omega$Normal[[5]],
                              p.omega$Normal[[6]],
@@ -663,12 +663,12 @@ for (m in 1:length(all.models)) {
 
 p1 <- cowplot::plot_grid(plotlist = p.VarPart$PA, ncol = 4)
 p1
-save_plot(here::here("output/figures/Final_figures/Fig2_PA_VP.png"), p1, 
+save_plot(here::here("output/Final_figures/Fig2_PA_VP.png"), p1, 
           base_height = 10, base_width = 16)
 
 p2 <- cowplot::plot_grid(plotlist = p.VarPart$Normal, ncol = 4)
 p2
-save_plot(here::here("output/figures/Final_figures/Fig3_Normal_VP.png"), p2, 
+save_plot(here::here("output/Final_figures/Fig3_Normal_VP.png"), p2, 
           base_height = 10, base_width = 16)
 
 
@@ -883,7 +883,7 @@ table.lm <- round(rbind(lm.r2$coefficients, lm.tmp$coefficients,
                         lm.cro$coefficients, lm.rnd$coefficients), 3)
 table.lm
 
-cowplot::save_plot(here::here("output/figures/Final_figures/Fig6_Comm_size.png"),
+cowplot::save_plot(here::here("output/Final_figures/Fig6_Comm_size.png"),
                    cowplot::plot_grid(R2.size, temp.size, forest.size,
                                       grass.size, crop.size, random.size,  
                                       labels = paste(letters[1:6], ")", sep = ""),
